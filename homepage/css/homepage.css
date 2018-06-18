@@ -1,0 +1,1082 @@
+/*rese*/
+	html, body, div, span,h1, h2, h3, h4, h5, h6, p,,
+	a,em, img,ul, li,form, label,table,tr, th, td,
+	article, aside, canvas, details, embed, {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+	}
+	/* HTML5 display-role reset for older browsers */
+	article, aside, details, figcaption, figure, 
+	footer, header, hgroup, menu, nav, section {
+		display: block;
+	}
+	body {
+		line-height: 1;
+		margin: 0;
+		padding: 0;
+	}
+	ol, ul{
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		font-size: 0;
+	}
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+	p,h1,h2,h3,h4,h5,h6,ul{
+		margin:0;
+		padding: 0;
+	}
+/*主页代码css*/
+	.head{
+	    position: relative;
+	    background-image: url(../img/01.png);
+	    background-repeat: no-repeat;
+	    background-size: 100%;
+	}
+	.headimg{
+		width: 128px;
+		height: 128px;
+		position: absolute;
+		top: 48px;
+		left: 48px;
+	}
+	.header{
+		padding-left: 208px;
+	    padding-top: 52px;
+	}
+	.storename{
+		font-size: 32px;
+		color: #fff;
+		line-height: 28px;
+		margin: 0;
+		letter-spacing: 0px;
+		margin-bottom: 18px
+	}
+	.storename_img{
+		vertical-align: sub;
+	}
+	.distributions{
+		color: #93999f;
+		font-size: 24px;
+		line-height: 28px;
+		letter-spacing: 0px;
+		margin: 0;
+		margin-bottom: 22px;
+	}
+	.discount{
+		font-size: 20px;
+		color:#fff;
+		line-height: 48px;
+		margin: 0;
+		height: 48px;
+		letter-spacing: 0px;
+		padding-bottom: 43px;
+	}
+
+	.number{
+		float: right;
+		border:1px solid rgba(0, 0, 0, 0.2);
+		color: #fff;
+		background-color:rgba(0, 0, 0, 0.2);
+		border-radius: 24px;
+		margin-right: 24px;
+	    font-size: 20px;
+	    line-height: 28px;
+	    letter-spacing: 0px;
+	    padding:9px 22px 9px 20px;
+	    cursor: pointer;
+	}
+	.notice_bg{
+    background-color: rgba(0, 0, 0, 0.85);
+	}
+	.noticewrap{
+		margin: 0;
+		margin-left: 24px;
+		padding-top: 18px;
+		margin-right: 24px;
+		padding-bottom: 18px;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+	.notice{
+		font-size: 20px;
+		color: #fff;
+		letter-spacing: 0px;
+		line-height: 28px;
+		display: inline-block;
+		margin: 0;
+	}
+	.nav{
+		padding: 0px;
+		margin: 0px;
+	}
+	.nav_list{
+		display: inline-block;
+		padding-top: 27px;
+		padding-bottom: 27px;
+		font-size: 28px;
+		letter-spacing: 0px;
+		line-height: 28px;
+		color: #4d555d;
+		cursor: pointer;
+		width: 33%;
+		text-align: center;
+	}
+	.jsColor{
+		color:red;
+	}
+	.navs{
+	    display: inline-block;
+	    padding: 0px;
+	    margin: 0px;
+	    float: left;
+	}
+	.navs_list{
+		font-size: 24px;
+	    color: #07111b;
+	    letter-spacing: 0px;
+	    width: 112px;
+	    height: 108px;
+	    line-height: 108px;
+	    text-align: left;
+	    border-bottom: 1px solid;
+	    border-color:rgba(7, 17, 27, 0.1);
+	    margin-left: 24px;
+	    margin-right: 24px;
+	}
+	.navs_list:nth-child(2){
+		line-height: 24px;
+	    margin-top: 42px;
+	}
+	.right_nav{
+    position: relative;
+    width: calc(100% - 160px);
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+	}
+	.product_wrap {
+		font-size: 0;
+	}
+	.height{
+	width: 160px;
+	display: inline-block;
+	position: relative;
+	background-color:#f3f5f7;
+	}
+	.setmeal_nav{
+		background-color: #f3f5f7;
+		border-left: 4px solid #d9dde1;
+	}
+	.setmeal_1nav{
+		position: relative;
+	}
+	.setmeal{
+		font-size: 24px;
+		color: #93999f;
+		line-height: 28px;
+		letter-spacing: 0px;
+		margin: 0px;
+		padding-top: 13px;
+		padding-bottom: 14px;
+		margin-left: 24px;
+	}
+	.commodity{
+	    margin-left: 36px;
+	    padding-left:132px;
+	    padding-bottom: 48px;
+	    border-bottom: 1px solid #d9dde1;
+	    margin-right: 36px;
+	}
+	.commodityimg{
+		width: 114px;
+	    height: 114px;
+	    position: absolute;
+	    top: 36px;
+	    left: 36px;
+	}
+	.commodity_name{
+		margin: 0;
+		font-size: 28px;
+		line-height: 28px;
+		letter-spacing: 0px;
+		color: #07111b;
+		margin-bottom: 17px;
+		padding-top: 40px;
+	}
+	.commodity_attribute{
+		margin: 0;
+		font-size: 20px;
+		line-height: 28px;
+		letter-spacing: 0px;
+		color: #93999f;
+		margin-bottom: 16px;
+	}
+	.evaluate{
+		margin-left: 23px;
+	}
+	.commodity_price{
+		margin: 0;
+		font-size: 28px;
+		font-weight: normal;
+		font-stretch: normal;
+		line-height: 28px;
+		letter-spacing: 0px;
+		color: #f01414;
+		display: inline-block;
+	}	
+	.commodity_prices{
+		margin: 0;
+		font-size: 20px;
+		font-weight: normal;
+		font-stretch: normal;
+		line-height: 28px;
+		letter-spacing: 0px;
+		color: #f01414;
+		margin-top: 48px;
+	}
+	.original_price{
+		display: inline-block;
+		font-size: 20px;
+		color: #93999f;
+		margin-left: 16px;
+		text-decoration: line-through;
+	}
+	.right{
+		float: right;
+	}
+	.right.none .plus_img0, .right.none .plus{
+		display: none;
+	}
+	.plus{
+		display: inline-block;
+		font-size: 20px;
+		font-weight: normal;
+		font-stretch: normal;
+		line-height: 28px;
+		letter-spacing: 0px;
+		color: #93999f;
+		margin: 0;
+		margin-left: 24px;
+		margin-right: 26px;
+	}
+	.car_plus{
+		display: inline-block;
+		font-size: 20px;
+		font-weight: normal;
+		font-stretch: normal;
+		line-height: 28px;
+		letter-spacing: 0px;
+		color: #93999f;
+		margin: 0;
+		margin-left: 24px;
+		margin-right: 26px;
+	}
+	.plus_img:nth-child(2){
+		margin-left: 26px;
+	}
+	.js-hide{
+		display: none;
+	}
+	.foot{
+		background-color: rgba(7, 17, 27, 0.95);
+	    position:fixed;
+	    left: 0;
+	    bottom: 0;
+	    z-index: 5;
+	    width: 100%;
+	    height: 95px;
+	    opacity: 0.95;
+	}
+	.foot_price{
+		margin: 0;
+		display: inline-block;
+		font-size: 24px;
+		line-height: 28px;
+		letter-spacing: 0px;
+		color: rgba(255, 255, 255, 0.4);
+		position: absolute;
+	    top: 38px;
+	    left: 161px;
+	    cursor: pointer;
+	}
+	.foot_distribution{
+		margin: 0;
+		display: inline-block;
+		font-size: 20px;
+		line-height: 28px;
+		letter-spacing: 0px;
+		color: rgba(255, 255, 255, 0.4);
+		position: absolute;
+	    top: 40px;
+	    left: 255px;
+	    cursor: pointer;
+
+	}
+	.foot_distance{
+		margin: 0;
+		display: inline-block;
+		font-size: 24px;
+		font-weight: normal;
+		font-stretch: normal;
+		line-height: 28px;
+		letter-spacing: 0px;
+		color: rgba(255, 255, 255, 0.4);
+		position: absolute;
+	    top: 39px;
+	    right: 56px;
+	    z-index: 100;
+	    cursor: pointer;
+	}
+	.foot_border{
+		border: 1px solid rgba(255, 255, 255, 0.1);;
+	    display: inline-block;
+	    height: 46px;
+	    position: absolute;
+	    top: 25px;
+	    left: 230px;
+	}
+	.car{
+		position: absolute;
+	    left: 36px;
+	    bottom: 16px;
+	}
+	.right_img{
+		position: absolute;
+		bottom: 0;
+		right: 0;
+	}
+	.i{
+		display: inline-block;
+		font-size: 18px;
+	    color: #fff;
+	    border: 1px solid red;
+	    border-radius: 44%;
+	    background-color: #f01414;
+	    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.4);
+	    padding: 9px 20px 9px 21px;
+	    position: absolute;
+	    left: 84px;
+	    top: -25px;
+	    z-index: 100;
+	}
+	.nones{
+		display: none;
+	}
+	.js{
+		display: none;
+	}
+/*公告*/
+	.wraps{
+		width: 100%;
+		height: 100%;
+		line-height: 1;
+	    margin: 0;
+	    padding: 0;
+	    background-color: #07111b;
+	    display: none;
+	    position: fixed;
+	    top: 0;
+	    left: 0;
+	    z-index: 100;
+	    opacity: 0.8;
+	}
+	.heads{
+	    width: 100%;
+	    text-align: center;
+	}
+	.head_title{
+		font-size: 32px;
+		font-weight: normal;
+		font-stretch: normal;
+		line-height: 28px;
+		letter-spacing: 0px;
+		color: #fff;
+		margin:0;
+		margin-bottom: 37px;
+		padding-top: 128px;
+	}
+	.head_img{
+		width: 40px;
+		height: 38px;
+		margin-left: 41px;
+		margin-bottom: 62px;
+	}
+	.nborder{
+		border:2px solid rgba(255, 255, 255, 0.2);
+		display: inline-block;
+		vertical-align: middle;
+	    width:224px;
+	}
+	.message{
+		display: inline-block;
+		margin: 0;
+		font-size: 28px;
+		font-weight: normal;
+		font-stretch: normal;
+		line-height: 28px;
+		letter-spacing: 0px;
+		color:#fff;
+		margin-left: 22px;
+		margin-right: 22px;
+	}
+	.position{
+	text-align: center;
+	}
+	.ul{
+		text-align: left;
+	    display: inline-block;
+	    margin-left: -170px;
+	    margin-bottom: 61px;
+	}
+	.list_title{
+		display: inline-block;
+		font-size: 24px;
+		font-weight: normal;
+		font-stretch: normal;
+		line-height: 28px;
+		letter-spacing: 0px;
+		color: #fff;
+		margin: 0;
+		margin-bottom: 33px;
+	}
+	.list:first-child{
+		margin-top: 51px;
+	}
+	.foot_p{
+		width: 552px;
+		font-size: 24px;
+		font-weight: normal;
+		font-stretch: normal;
+		line-height: 48px;
+		letter-spacing: 0px;
+		color: #fff;
+		margin: 0;
+		display: inline-block;
+		text-align: left;
+		margin-top: 58px;
+	}
+	.foot_img{
+		text-align: center;
+		margin-top: 232px;
+	}
+/*评价页CSS*/
+
+	.evaluate_ul{
+		text-align: center;
+	    display: inline-block;
+	    padding-right: 49px;
+	    padding-left: 47px;
+	    border-right: 1px solid rgba(7, 17, 27, 0.1);
+	    margin-top: 46px;
+	    margin-bottom: 50px;
+	}
+	.evaluate_list:first-child{
+	    font-size: 48px;
+	    letter-spacing: 0px;
+	    color: #ff9900;
+	    padding-bottom: 20px;
+	}
+	.evaluate_list:nth-child(2){
+		font-size: 24px;
+	    font-weight: normal;
+	    font-stretch: normal;
+	    line-height: 28px;
+	    letter-spacing: 0px;
+	    color: #07111b;
+	}
+	.evaluate_list:last-child{
+		font-size: 20px;
+	    line-height: 28px;
+	    letter-spacing: 0px;
+	    color: #93999f;
+	    padding-top: 16px;
+	}
+	.score{
+		display: inline-block;
+		margin-top: 41px;
+		margin-left: 49px;
+	}
+	.service{
+		display: inline-block;
+	    font-size: 24px;
+	    line-height: 28px;
+	    letter-spacing: 0px;
+	    color: #07111b;
+	    margin: 0;
+	    padding-bottom: 27px;
+	    margin-right: 12px;
+	}
+	.attitude_img{
+		margin-left: 12px;
+	}
+	.attitude_img1{
+		margin-left: 24px;
+	}
+	.numbers{
+		font-size: 24px;
+		line-height: 28px;
+		letter-spacing: 0px;
+		color: #ff9900;
+		display: inline-block;
+		margin: 0;
+		margin-left: 25px;
+	}
+	.time{
+		display: inline-block;
+		margin:0;
+		font-size: 24px;
+		line-height: 28px;
+		letter-spacing: 0px;
+		color: #93999f;
+		margin-left: 14px;
+	}
+	.feedback{
+		border-top: 1px solid rgba(7, 17, 27, 0.1);
+		border-bottom: 1px solid rgba(7, 17, 27, 0.1);
+		margin-top: 34px;
+
+	}
+	.feedback_ul{
+		margin-top: 34px;
+		margin-bottom: 36px;
+	}
+	.feedback_list{
+	    font-size: 24px;
+	    letter-spacing: 0px;
+	    color: #ffffff;
+		display: inline-block;
+	    border: 1px solid;
+	    border-radius: 2px;
+	    padding: 20px 23px 20px 24px;
+	    margin-left: 36px;
+	    background-color: #00a0dc;
+
+	}
+	.feedback_list:nth-child(2){
+		background-color: rgba(0, 160, 220, 0.2);
+		    margin-left: 16px;
+	}
+	.feedback_list:last-child{
+		background-color: rgba(147, 153, 159, 0.2);
+		  margin-left: 16px;
+	}
+	.border{
+		border-bottom: 1px solid rgba(7, 17, 27, 0.1);
+		display: inline-block;
+		width: 678px;
+		margin-left: 36px;
+		margin-bottom: 29px;
+		opacity: 0.1;
+	}
+
+	.evaluation-grey{
+	    color: white;
+	    font-size: 36px;
+	    width: 40px;
+	    height: 40px;
+	    text-align: center;
+	    border: 1px solid;
+	    display: inline-block;
+	    border-radius: 50%;
+	    line-height: 40px;
+	    background-color: #93999f;
+	    margin-left: 40px;
+	}	
+	.evaluation-green{
+	    color: white;
+	    font-size: 36px;
+	    width: 40px;
+	    height: 40px;
+	    text-align: center;
+	    border: 1px solid;
+	    display: inline-block;
+	    border-radius: 50%;
+	    line-height: 40px;
+	    background-color:#00c850;
+	    margin-left: 40px;
+	    display: none;
+	}
+
+	.look_content{
+		font-size: 24px;
+		letter-spacing: 0px;
+		color: #93999f;
+		display: inline-block;
+		margin:0;
+		margin-left: 12px;
+	    margin-bottom: 28px;
+	}
+	.customer_img{
+		width: 56px;
+		height: 56px;
+	    position: absolute;
+	    top: 0px;
+	    left: 36px;
+	}
+	.customer_wrap{
+	    position: relative;
+	}
+	.customer_content{
+	    border-bottom: 1px solid rgba(7, 17, 27, 0.1);
+	    margin-left: 36px;
+	    margin-top: 38px;
+	    margin-right: 36px;
+	    padding-bottom: 36px;
+	    padding-left: 80px;
+	    position: relative;
+	}
+	.id_img{
+		width: 56px;
+	    height: 56px;
+	    display: inline-block;
+	    border-radius: 50px;
+	    position: absolute;
+	    left: 36px;
+	}
+	.customerId{
+		font-size: 20px;
+		display: inline-block;
+	    line-height: 28px;
+	    letter-spacing: 0px;
+	    color: #07111b;
+	    margin: 0;
+	  	margin-bottom: 13px;
+	}
+	.score_time{
+		float: right;
+	    margin: 0;
+		font-size: 20px;
+		letter-spacing: 0px;
+		color: #93999f;
+	}
+	.customer_score{
+		display: inline-block;
+		margin-left: 6px;
+	}
+	.times{
+		font-size: 20px;
+		color: #93999f;
+		margin:0;
+		margin-left: 15px;
+		display: inline-block;
+	}
+	.customerId_evaluation{
+		font-size: 24px;
+		letter-spacing: 0px;
+		color: #07111b;
+		margin:0;
+		margin-top: 20px;
+	}
+	.food{
+	    margin: 0;
+	    font-size: 18px;
+	    color: #93999f;
+	    display: inline-block;
+	    border: 1px solid rgba(7, 17, 27, 0.1);
+	    border-radius: 2px;
+	    padding: 7px 12px;
+	    margin-left: 16px;
+	}
+	.food_wrap{
+
+	    margin-top: 22px;
+	}
+/*商家页css*/
+	.store_head{
+		position: relative;
+		margin-left: 36px;
+	    margin-right: 36px;
+	    border-bottom: 1px solid rgba(7, 17, 27, 0.1);
+	    padding-bottom: 42px;
+	}
+	.store{
+	    font-size: 28px;
+	    color: #07111b;
+	    letter-spacing: 0px;
+	    margin-top: 35px;
+	    margin-bottom: 18px;
+	}
+	.love{
+		position: absolute;
+		top: 7px;
+		right: 9px;	
+	}
+
+	.sale{
+		font-size: 20px;
+		color: #4d555d;
+		display: inline-block;
+		margin-left: 17px;
+	}
+	.sales{
+		margin-left: 26px;
+	}
+	.collection{
+	    float: right;
+	    margin-top: 13px;
+	    font-size: 20px;
+	    color: #4d555d;
+	    margin-right: 7px;
+	}
+	.wrap_border{
+		border-top: 1px solid  rgba(0, 0, 0, 0.1);
+	}
+	.introduce{
+		width: 32%;
+	    display: inline-block;
+	    margin-top: 35px;
+	    text-align: center;
+	    margin-bottom: 41px;
+	}
+	.introduce:nth-child(2){
+	    border-right: 1px solid rgba(7, 17, 27, 0.1);
+	    border-left: 1px solid rgba(7, 17, 27, 0.1);
+	}
+	.interval{
+	    width: 100%;
+	    height: 32px;
+		display: inline-block;
+	    border-top: 1px solid rgba(7, 17, 27, 0.1);
+	    border-bottom: 1px solid rgba(7, 17, 27, 0.1);
+	    background-color: #f3f5f7;
+	}
+	.distribution{
+	    font-size: 20px;
+	    line-height: 28px;
+	    letter-spacing: 0px;
+	    color: #fff;
+	}
+	.money{
+	    font-size: 48px;
+	    line-height: 28px;
+	    letter-spacing: 0px;
+	    color: #07111b;
+	    margin-top: 14px;
+	}
+	.company{
+		font-size: 20px;
+		font-weight: normal;
+		letter-spacing: 0px;
+		color: #07111b;
+	}
+	.notices{
+		font-size: 28px;
+		line-height: 28px;
+		letter-spacing: 0px;
+		color: #07111b;
+	    margin-left: 38px;
+	    margin-top: 36px;
+	}
+	.history{
+		font-size: 24px;
+		line-height: 48px;
+		letter-spacing: 0px;
+		color: #f01414;
+	    margin-left: 60px;
+	    margin-right: 66px;
+	    margin-top: 29px;
+	    padding-bottom: 44px;
+	    border-bottom: 1px solid rgba(7, 17, 27, 0.1);
+	}
+	.list{
+		border-bottom: 1px solid rgba(7, 17, 27, 0.1);
+		margin-left: 60px;
+		margin-right: 60px;
+		font-size: 24px;
+	}
+	.activity_list{
+		padding-top: 36px;
+		padding-bottom: 37px;
+		border-bottom: 1px solid rgba(7, 17, 27, 0.1);
+		margin-left: 60px;
+		margin-right: 60px;
+		font-size: 24px;
+	}
+	.list_style{
+		margin-left:24px;
+	}
+	.content{
+
+		line-height: 28px;
+		letter-spacing: 0px;
+		color: #07111b;
+		display: inline-block;
+		margin-left: 12px;
+	}
+	.realscene{
+		font-size: 28px;
+		line-height: 28px;
+		letter-spacing: 0px;
+		color: #07111b;
+		margin-left: 38px;
+		margin-top: 36px;
+	}
+	.realscene:last-child{
+		margin-left: 0;
+	}
+	.realscene_list{
+		display: inline-block;
+		margin-left: 12px;
+		margin-top: 23px;
+		padding-bottom: 38px;
+	}
+	.realscene_list:first-child{
+		margin-left: 36px;
+	}
+	.business_information{
+		font-size: 24px;
+		line-height: 36px;
+		letter-spacing: 0px;
+		color: #07111b;
+	}
+/*购物车*/
+	.mask{
+	    background-color: #07111b;
+	    opacity: 0.4;
+	    position: fixed;
+	    top: 0;
+	    width: 100%;
+	    height: 100%;
+	    z-index: 1;
+	}
+	.masks{
+		height: 495px;
+		max-height:495px;
+	    position: fixed;
+	    z-index: 1;
+		background-color: #f3f5f7;
+	    width: 100%;
+	    bottom: 0;
+	    padding-bottom: 130px;
+	}
+	.mask_none{
+		display: none;
+	}
+	.shopping_cart{
+		font-size: 28px;
+	    line-height: 28px;
+	    letter-spacing: 0px;
+	    color: #07111b;
+	    padding-top: 27px;
+	    padding-bottom: 27px;
+	    margin: 0;
+	    display: inline-block;
+	    margin-left: 36px;
+	}
+	.empty{
+		float: right;
+	    font-size: 24px;
+	    letter-spacing: 0px;
+	    color: #00a0dc;
+	    margin-right: 36px;
+	    line-height: 82px;
+	}
+	.car_ul{
+		
+	    margin: 0;
+	    font-size: 0;
+	    padding: 0;
+	    margin-left: 36px;
+	    margin-right: 36px;
+	}
+	.car_list{
+		position: relative;
+	    list-style: none;
+	    width: 100%;
+	    border-bottom: 1px solid  rgba(7, 17, 27, 0.1);;
+	}
+	.car_wrap{
+	    float: right;
+	    display: inline-block;
+	    margin-top: 29px;
+	}
+	.car_food{
+		display: inline-block;
+	    margin: 0;
+	    margin-top: 34px;
+	    margin-bottom: 36px;
+	    font-size: 28px;
+	    line-height: 28px;
+	    letter-spacing: 0px;
+	    color: #07111b;
+	}
+	.car_price{
+	    display: inline-block;
+	    font-size: 28px;
+	    letter-spacing: 0px;
+	    color: #f01414;
+	    margin: 0;
+	}
+	.symbol{
+	    font-size: 20px;
+	    line-height: 28px;
+	    letter-spacing: 0px;
+	    color: #f01414;
+	}
+	.symbol_reduce{
+	    margin-left: 29px
+	}
+	.food_number{
+		font-size: 20px;
+	    line-height: 28px;
+	    letter-spacing: 0px;
+	    color: #93999f;
+	    margin-left: 24px;
+	    margin-right: 24px;
+	}
+/*商品评价*/
+	.food-none{
+		display: none;
+	}
+	.food_head_img{
+		width: 100%;
+	}
+	.food_head{
+		margin-left: 35px;
+		padding-bottom: 26px;
+	}
+	.food_introduce{
+		font-size: 24px;
+		line-height: 48px;
+		letter-spacing: 0px;
+		color: #4d555d;
+		margin: 23px 54px 48px 52px;
+	}
+	.food_evaluatel{
+		margin-left: 23px;
+	}
+	.food_evaluate:last-child{
+		margin-bottom: 95px;
+	}
+	.food_shopcars{
+		float: right;
+	    border: 1px solid #fff;
+	    padding: 9px 23px;
+	    font-size: 20px;
+	    font-weight: normal;
+	    font-stretch: normal;
+	    line-height: 28px;
+	    letter-spacing: 0px;
+	    color: #ffffff;
+	    background-color: #00a0dc;
+	    border-radius: 24px;
+	    margin-right: 36px;
+	    margin-bottom: 38px;
+	}
+	.food_evaluate_ul{
+		font-size: 0;
+		border-bottom: 1px solid rgba(7, 17, 27, 0.1);
+	    margin-left: 36px;
+	    margin-right: 36px;
+	    margin-bottom: 29px;
+	}
+	.food_evaluate_list{
+		display: inline-block;
+	    padding: 17px 24px 17px 22px;
+	    background-color: #00a0dc;
+	    font-size: 24px;
+	    line-height: 32px;
+	    letter-spacing: 0px;
+	    color: #fff;
+	    margin-top: 36px;
+	    margin-bottom: 36px;
+	}
+	.food_evaluate_list:nth-child(2){
+		background-color: rgba(0, 160, 220, 0.2);
+		margin-left: 16px;
+		color: #4d555d;
+	}
+	.food_evaluate_list:last-child{
+		background-color:rgba(147, 153, 159, 0.2);
+		margin-left: 16px;
+		    color: #4d555d;
+	}
+	.food_sub{
+		font-size: 16px;
+		margin-left: 8px;
+	}
+	.food_first{
+		color: #fff;
+	}
+
+	.food_bottom_border{
+		border-bottom: 2px solid rgba(147, 153, 159, 0.2);
+	}
+	.food_evaluate{
+		margin:36px;
+		border-bottom:1px solid rgba(7, 17, 27, 0.1);
+	}
+	.food_img_evaluate{
+		font-size: 24px;
+		line-height: 28px;
+		letter-spacing: 0px;
+		color: #07111b;
+		padding-bottom: 36px;
+	}
+	.food_time_id{
+		font-size: 24px;
+		line-height: 28px;
+		letter-spacing: 0px;
+		color: #93999f;
+		margin-bottom: 21px;
+	}
+	.food_ids{
+		float: right;
+		font-size: 18px;
+	}
+	.avatar{
+	width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-left: 13px;
+	}
+	.js_foot_distance{
+		color:rgba(255, 255, 255, 0.4);
+		position: absolute;
+		top: 39px;
+		right: 36px;
+	}
+	.js_color{
+		color: #fff;
+		position: absolute;
+		top: 39px;
+		right: 56px;
+	}
+	.rectangleColor{
+		width: 210px;
+		height: 95px;
+		float: right;
+		background-color: #2b333b;
+	}
+	.js-rectangleColor{
+		background-color: #00b43c;
+	}
+	.car_foods{
+		display: inline-block;
+		margin-bottom: 35px;
+	}
+	.car_foods_price{
+		margin-right: 29px;
+	}
+	.car_right{
+		position: absolute;
+	    right: 0;
+	    top: 28px;
+	}
+	.car_head{
+		border-bottom: 1px solid rgba(7, 17, 27, 0.1);
+		background-color: #f3f5f7;
+	}
+	.car_ul_wrap{
+		height: 100%;
+		background-color: #fff;
+	}
