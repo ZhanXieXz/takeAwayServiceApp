@@ -1,11 +1,13 @@
 //json
 var foodsCart = {};
-	//滚动条代码
-    var myScroll1 = null;  
-    var myScroll2 = null;  
-    var myScroll3 = null;		    
-    var myScroll4 = null;
-    var myScroll5 = null;
+
+//滚动条代码刷新
+var myScroll1 = null;  
+var myScroll2 = null;  
+var myScroll3 = null;		    
+var myScroll4 = null;
+var myScroll5 = null;
+
 //模板生成html
 function _gettpl(tplName, data){
 	return _.template($('#' + tplName).html())(data);
@@ -143,7 +145,6 @@ function bindHomeEvet() {
 				 }else{
 					foodsCart[foodsId]=food;
 				 }
-			 setShopCartDom(foodsCart);
 	});
 
 	//购物车详情页函数
@@ -155,11 +156,16 @@ function bindHomeEvet() {
 	$('.plus_img0').click(function(e){
 		//阻止冒泡函数
 		stopBubble(e);
+		//获取商品id
+		var carFoodsId = $(this).parents('.setmeal_1nav').attr('id'),
+			//购物车内部商品数量
+			carfoodsNum = $('#js-shopCart').find('.car_plus').text(),
 		//商品数量
-		var currentNum = Number($(this).next().text());
+			currentNum = Number($(this).next().text());
 		currentNum--;
 		if(currentNum == 0){
 			$(this).parent().addClass('none');
+			$('.car_list[id="'+carFoodsId+'"]').addClass('nones');
 		}else {
 			$(this).parent().removeClass('none');
 		}
@@ -172,12 +178,9 @@ function bindHomeEvet() {
 		}
 		$('.i').text(numbers);
 		//购物车内部
-			//获取商品id
-		var carFoodsId = $(this).parents('.setmeal_1nav').attr('id'),
-			//购物车内部商品数量
-			carfoodsNum = $('#js-shopCart').find('.car_plus').text();
-			carfoodsNum--;
-			//购物车内部商品最终数量
+
+		carfoodsNum--;
+		//购物车内部商品最终数量
 		$('#js-shopCart').find('li[id="'+carFoodsId+'"] .car_plus').text(currentNum);
 			//价格
 			var not =Number($(this).parent().siblings('.commodity_price').children('.js_money').text());
@@ -322,6 +325,7 @@ function bindHomeEvet() {
 			$('.js_wraps').css({'height':height,'overflow':'hidden'})
 		}
 		loaded();
+		setShopCartDom(foodsCart);
 	});
 	
 
