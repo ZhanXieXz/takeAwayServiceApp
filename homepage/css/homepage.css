@@ -161,6 +161,9 @@
 		display: table-cell;
 	    vertical-align: middle;
 	}
+	.js_navsList{
+		background-color: rgba(147, 153, 159, 0.2);
+	}
 /*	.navs_list:after {
 		content: "";
 		position: absolute;

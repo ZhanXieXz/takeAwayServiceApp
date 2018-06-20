@@ -81,10 +81,12 @@ function bindHomeEvet() {
 		loaded();
 	});
 
+	//点击定位商品事件
 	$('.navs_list').click(function(){
 		var listId = $(this).attr('id');
 			listId = listId.replace('X','');
 			myScroll4.scrollToElement('#' + listId,200);
+			$(this).addClass('js_navsList').siblings().removeClass('js_navsList');
 	})
 
 	//添加商品，购物车价格、高亮、结算按钮
@@ -361,6 +363,8 @@ function bindHomeEvet() {
 	$('#wrapper-hide').css('height',height);
 	//商家页高度
 	$('#wrapper-hides').css('height',height);
+	//第一个li添加高亮
+	$('.navs_list:first-child').addClass('js_navsList');
 };
 
 //页面入口
@@ -438,8 +442,6 @@ $('.jsstart').click(function(){
 	}
 });
 
-
-
 //点击跳转商品详情评价
 $('.setmeal_1nav').click(function(){
 	//点击打印id
@@ -456,6 +458,7 @@ $('.setmeal_1nav').click(function(){
 	$('#js-food').html(_html).show();
 });
 
+//商品详情页返回按钮
 $('#js-food').on('click','.return',function(){
 	$('#js-food').empty().addClass('food-none');
 	$('.js-wrap').css('display','block');
