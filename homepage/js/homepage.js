@@ -1,6 +1,11 @@
 //json
 var foodsCart = {};
-
+	//滚动条代码
+    var myScroll1 = null;  
+    var myScroll2 = null;  
+    var myScroll3 = null;		    
+    var myScroll4 = null;
+    var myScroll5 = null;
 //模板生成html
 function _gettpl(tplName, data){
 	return _.template($('#' + tplName).html())(data);
@@ -71,12 +76,19 @@ function bindHomeEvet() {
 		var linkTo = $(this).attr('link');
 		$('.jscont').hide();
 		$('.jscont[jsLink="'+linkTo+'"]').show();
+		loaded();
 	});
+
+	$('.navs_list').click(function(){
+		var listId = $(this).attr('id');
+			listId = listId.replace('X','');
+			myScroll4.scrollToElement('#' + listId,200);
+	})
 
 	//添加商品，购物车价格、高亮、结算按钮
 	var numbers=0;
 		//添加键点击事件
-	$('.plus_img').click(function(e){
+	$('.plus_img').off('click').on('click', function(e){
 		//阻止冒泡函数
 		stopBubble(e);
 		var price = 0;
@@ -300,17 +312,35 @@ function bindHomeEvet() {
 		insufficientTwenty();
 	})
 
-	//滚动条代码
-	var myScroll;
+	//购物车详情页的页面切换
+	$('.jsCar').click(function(){
+		$('.jsCarTab').toggleClass('mask_none');
+		if($('.jsCarTab').hasClass('mask_none')){
+			$('.js_wraps').css({'height':'auto','overflow':'initial'})
+		}else {
+			var height = $(window).height()+'px';
+			$('.js_wraps').css({'height':height,'overflow':'hidden'})
+		}
+		loaded();
+	});
+	
+
 	function loaded() {
-	    var myScroll1 = new iScroll('wrapper');  
-	    var myScroll2 = new iScroll('wrapper-hide');  
-	    var myScroll3 = new iScroll('wrapper-hides');		    
-	    var myScroll4 = new iScroll('next-wrapper-hide');
-	    var myScroll5 = new iScroll('car-wrapper-hide');
+	    myScroll1.refresh();  
+	    myScroll2.refresh();  
+	    myScroll3.refresh();		    
+	    myScroll4.refresh();
+	    myScroll5.refresh();
+	}
+	function firstloaded() {
+	    myScroll1 = new iScroll('wrapper');  
+	    myScroll2 = new iScroll('wrapper-hide');  
+	    myScroll3 = new iScroll('wrapper-hides');		    
+	    myScroll4 = new iScroll('next-wrapper-hide');
+	    myScroll5 = new iScroll('car-wrapper-hide');
 	}
 	document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
-	document.addEventListener('DOMContentLoaded', function () { setTimeout(loaded, 200); }, false);
+	document.addEventListener('DOMContentLoaded', function () { setTimeout(firstloaded, 200); }, false);
 
 	// 滚动条页面高度
 	//window页面高度
@@ -404,16 +434,7 @@ $('.jsstart').click(function(){
 	}
 });
 
-//购物车详情页的页面切换
-$('.jsCar').click(function(){
-	$('.jsCarTab').toggleClass('mask_none');
-	if($('.jsCarTab').hasClass('mask_none')){
-		$('.js_wraps').css({'height':'auto','overflow':'initial'})
-	}else {
-		var height = $(window).height()+'px';
-		$('.js_wraps').css({'height':height,'overflow':'hidden'})
-	}
-});
+
 
 //点击跳转商品详情评价
 $('.setmeal_1nav').click(function(){
@@ -429,4 +450,9 @@ $('.setmeal_1nav').click(function(){
 	var _html = _gettpl('js-food-text', {'food': food});
 	$('.js-wrap').hide();
 	$('#js-food').html(_html).show();
+});
+
+$('#js-food').on('click','.return',function(){
+	$('#js-food').empty().addClass('food-none');
+	$('.js-wrap').css('display','block');
 });
