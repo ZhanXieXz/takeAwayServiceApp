@@ -319,15 +319,17 @@ function bindHomeEvet() {
 
 	//购物车详情页的页面切换
 	$('.jsCar').click(function(){
-		$('.jsCarTab').toggleClass('mask_none');
-		if($('.jsCarTab').hasClass('mask_none')){
-			$('.js_wraps').css({'height':'auto','overflow':'initial'})
-		}else {
-			var height = $(window).height()+'px';
-			$('.js_wraps').css({'height':height,'overflow':'hidden'})
-		}
 		loaded();
 		setShopCartDom(foodsCart);
+		if ($('.car_list').length>0) {
+			$('.jsCarTab').toggleClass('mask_none');
+			if($('.jsCarTab').hasClass('mask_none')){
+				$('.js_wraps').css({'height':'auto','overflow':'initial'})
+			}else {
+				var height = $(window).height()+'px';
+				$('.js_wraps').css({'height':height,'overflow':'hidden'})
+			}
+		}
 	});
 	
 
