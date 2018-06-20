@@ -40,7 +40,7 @@
 			</div>
 			<!-- 评价页代码html -->
 			<div id="wrapper-hide" style="position: relative;" class="evaluate-hide js-hide jscont" jsLink="evaluate">
-				<div id="scroller">
+				<div id="scroller" style="width: 100%;">
 					<div id="js-evaluateUl">
 					</div>
 					<div>
@@ -62,10 +62,7 @@
 <div class="wraps jsNoticeWrap" style="display: none;">
 	<div id="js-notice">
 		</div>
-		<div class="position">
-			<ul class="ul" id="js-discount">
-			</ul>
-		</div>
+
 		<div class="heads">
 				<i class="nborder"></i>
 				<h3 class="message">商家公告</h3>
@@ -88,7 +85,7 @@
 		<p class="empty">清空</p>
 	</div>
 	<div class="car_ul_wrap" id="car-wrapper-hide" style="position: relative; overflow: hidden;">
-		<div style="width: 100%;height: 425px;">
+		<div style="width: 100%;">
 			<ul class="car_ul" id="js-shopCart">
 	<!-- 			<li class="car_list">
 					<p class="commodity_name car_foods">莲子核桃黑米粥</p>
@@ -162,12 +159,16 @@
 			<i class="nborder"></i>
 		</div>
 	<!-- 优惠 -->
-	<% _.each(data.seller.supports, function(n){ %>
-	<li class="list">
-		<img src="homepage/img/decrease_4@2x.png">
-		<h4 class="list_title"><%=n.description%></h4>
-	</li>
-	<% }); %>
+	<div class="position">
+		<ul class="ul" id="js-discount">
+			<% _.each(data.seller.supports, function(n){ %>
+			<li class="list">
+				<img src="homepage/img/decrease_4@2x.png">
+				<h4 class="list_title"><%=n.description%></h4>
+			</li>
+			<% }); %>
+		</ul>
+	</div>
 	<!-- 公告 -->
 	<p class="foot_p">
 		<%=data.seller.bulletin%>
@@ -175,14 +176,14 @@
 </script>
 <!-- 左侧商品类型列表 -->
 <script type="text/template" id="navs-list">
-  	<% _.each(data.goods, function(n){ %>
-    <li class="navs_list"><%=n.name%></li>
+  	<% _.each(data.goods, function(n,index){ 
+  		n.id = 'good_' + index %>
+    <li class="navs_list" id="<%=n.id%>X"><span><%=n.name%></span></li>
   	<% }); %>
 </script>
 <!-- 右侧商品类型列表 -->
 <script type="text/template" id="one-person">
-  	<% _.each(data.goods, function(n,index){
-  		n.id = 'good_' + index %>
+  	<% _.each(data.goods, function(n,index){%>
 		<li class="setmeal_nav" id="<%=n.id%>">
 			<h3 class="setmeal"><%=n.name%></h3>
 		</li>
@@ -400,6 +401,7 @@
 	</script>
 <!-- food-评价 -->
 <script type="text/template" id="js-food-text">
+			<h1 class="return"> < </h1>
 			<img src="<%=food.icon%>" class="food_head_img">
 			<div class="food_head">
 				<h3 class="commodity_name"><%=food.name%></h3>
@@ -432,7 +434,7 @@
 						</ul>
 					</div>
 					<div class="food_bottom_border">
-						<span class="rights">√</span>
+						<span class="evaluation-grey">√</span>
 						<h3 class="look_content">只看有内容的评价</h3>
 					</div>
 				<div>
